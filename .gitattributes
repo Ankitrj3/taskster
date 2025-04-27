@@ -1,0 +1,31 @@
+# Spring Boot
+demo/mvnw text eol=lf
+demo/*.cmd text eol=crlf
+demo/*.bat text eol=crlf
+demo/*.sh text eol=lf
+
+# Next.js
+demo-app/*.js text eol=lf
+demo-app/*.jsx text eol=lf
+demo-app/*.ts text eol=lf
+demo-app/*.tsx text eol=lf
+demo-app/*.json text eol=lf
+demo-app/*.md text eol=lf
+demo-app/*.yml text eol=lf
+demo-app/*.yaml text eol=lf
+demo-app/*.css text eol=lf
+demo-app/*.scss text eol=lf
+demo-app/*.html text eol=lf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary
+*.mov binary
+*.mp4 binary
+*.mp3 binary
+*.ttf binary
+*.eot binary
+*.woff binary
+*.woff2 binary
