@@ -14,7 +14,9 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# Set standalone output only during build
+# Pass API_URL as build argument
+ARG API_URL
+ENV NEXT_PUBLIC_API_URL=$API_URL
 ENV NEXT_OUTPUT_STANDALONE=true
 RUN npm run build
 
