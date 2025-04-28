@@ -1,7 +1,10 @@
-import type { NextConfig } from "next";
+import { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
+const config: NextConfig = {
   /* config options here */
+  output:
+    process.env.NEXT_OUTPUT_STANDALONE === "true" ? "standalone" : undefined,
+    unoptimized: true,
 };
 
-export default nextConfig;
+export default config;
