@@ -24,3 +24,57 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Custom component styles */
+.status-pill-up {
+  background-color: rgba(6, 78, 59, 0.7);
+  color: rgb(110, 231, 183);
+  border: 1px solid rgb(4, 120, 87);
+  animation-duration: 2s;
+}
+
+.status-pill-down {
+  background-color: rgba(127, 29, 29, 0.7);
+  color: rgb(252, 165, 165);
+  border: 1px solid rgb(185, 28, 28);
+  animation-duration: 2s;
+}
+
+.status-indicator-dot-up {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  margin-right: 0.375rem;
+  background-color: rgb(52, 211, 153);
+}
+
+.status-indicator-dot-down {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  margin-right: 0.375rem;
+  background-color: rgb(248, 113, 113);
+}
+
+.loading-spinner-inner {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  border-top: 2px solid rgb(100, 116, 139);
+  animation: spin 1s linear infinite;
+}
+
+.loading-spinner-outer {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  border-left: 2px solid transparent;
+  border-right: 2px solid rgb(148, 163, 184);
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
