@@ -3,6 +3,9 @@ name: Docker Build Spring Boot (demo)
 on:
   push:
     branches: ["main"]
+    paths:
+      - "demo/**"
+      - ".github/workflows/docker-build-demo.yml"
     # Trigger on version tags
     tags:
       - "v*.*.*"

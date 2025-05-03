@@ -5,6 +5,9 @@ on:
     types: [opened, synchronize, reopened]
     branches:
       - "**"
+    paths:
+      - "demo/**"
+      - ".github/workflows/build-demo.yml"
 
 jobs:
   build:
