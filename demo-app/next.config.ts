@@ -1,9 +1,11 @@
 import { NextConfig } from "next";
 
 const config: NextConfig = {
-  /* config options here */
-  output:
-    process.env.NEXT_OUTPUT_STANDALONE === "true" ? "standalone" : undefined,
+  output: "export",
+  images: {
+    unoptimized: true,
+  },
+  basePath: process.env.NODE_ENV === "production" ? "/taskster" : "",
 };
 
 export default config;
