@@ -31,6 +31,8 @@ jobs:
         with:
           distribution: "temurin"
           java-version: "17"
+      - name: Make Maven wrapper executable
+        run: chmod +x ./mvnw
       - name: Build with Maven
         run: ./mvnw clean install --no-transfer-progress
       - name: Set up Docker Buildx
