@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌐 Global Project Delivery Hub
 
-## Getting Started
+Welcome to the official GitHub organization for our international project delivery firm. We work with global clients to build fast, efficient, and scalable solutions—powered by a distributed team of expert developers, designers, and project managers.
 
-First, run the development server:
+## 💼 Our Mission
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Deliver high-quality results at speed, backed by reliability and cross-functional teamwork.  
+We serve clients worldwide and foster a collaborative space where great ideas become real-world solutions.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 👥 Team Members
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Our strength lies in our people. This org is maintained by a diverse group of global contributors:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Rajvardhan** – Lead Backend Engineer (Java/Spring Boot, Node.js, GoLang)
+- **[Ankit Ranjan](https://github.com/ankitrj3)** – Frontend Developer (React, Next.js)
+- **[Vikas Singh](https://github.com/xanderbilla)** – DevOps Engineer (Docker, Jenkins, AWS)
+- **Pushkar** – UI/UX Designer
 
-## Learn More
+> Want to join the team? [Contact us](mailto:contact@taskstersolutions.com) or check the [CONTRIBUTING.md](CONTRIBUTING.md) for more info.
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Tech We Use
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Projects in this org span multiple stacks, including:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Frontend**: Next.js
+- **Backend**: Node.js, Spring Boot
+- **Database**: PostgreSQL, MongoDB, Redis
+- **DevOps**: Docker, GitHub Actions, AWS
 
-## Deploy on Vercel
+## 📁 Repo Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Each repository under this organization represents:
+- A client project
+- A shared module or utility
+- Internal tools & documentation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Refer to each repo's README for specific details.
+
+## 🤝 Contributing
+
+We’re building a strong developer community.  
+To contribute:
+1. Fork the repository
+2. Create a new branch (`feature/your-feature`)
+3. Submit a Pull Request with clear details
+
+Please follow our [contribution guidelines](CONTRIBUTING.md) and respect the [code of conduct](CODE_OF_CONDUCT.md).
+
+## 📣 Community & Communication
+
+We collaborate via:
+- GitHub Issues & Discussions
+- Slack / Discord (invite-only)
+- Weekly syncs (for core members)
+
+## 📫 Contact
+
+Have a project or want to join us?  
+📧 Email: [**contact@taskstersolutions.com**](mailto:contact@taskstersolutions.com)  
+🌐 Website: [**taskstersolutions.com**](https://taskstersolutions.com)

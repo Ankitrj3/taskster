@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Button, Icon, Card } from "./components/shared";
+import { Button, Icon, Card } from "../components/shared";
 
 export default function NotFound() {
   return (

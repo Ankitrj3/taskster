@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import { Suspense } from "react";
 
 // Use dynamic import with suspense for the main status card
-const StatusCard = dynamic(() => import("./components/StatusCard"), {
+const StatusCard = dynamic(() => import("../components/StatusCard"), {
   loading: () => <StatusCardSkeleton />,
   ssr: false,
 });
