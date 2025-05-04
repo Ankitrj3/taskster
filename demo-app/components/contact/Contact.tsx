@@ -21,7 +21,7 @@ const ContactForm = dynamic(() => import("./ContactForm"), {
   loading: () => <ContactFormSkeleton />,
 });
 
-export function Contact() {
+export default function Contact() {
   const [data, setData] = useState<ContactData | null>(null);
   const [loading, setLoading] = useState(true);
 
