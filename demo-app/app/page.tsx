@@ -1,50 +1,73 @@
 "use client";
 
+import { Navbar } from "@/components/Navbar/Navbar";
+import { Hero } from "@/components/Hero/Hero";
 import dynamic from "next/dynamic";
-import { Suspense } from "react";
+import ProjectsSkeleton from "@/components/skeletons/ProjectsSkeleton";
+import TeamSkeleton from "@/components/skeletons/TeamSkeleton";
+import WorkProcessSkeleton from "@/components/skeletons/WorkProcessSkeleton";
+import ContactSkeleton from "@/components/skeletons/ContactSkeleton";
+import FooterSkeleton from "@/components/skeletons/FooterSkeleton";
 
-// Use dynamic import with suspense for the main status card
-const StatusCard = dynamic(() => import("../components/StatusCard"), {
-  loading: () => <StatusCardSkeleton />,
-  ssr: false,
-});
+const Projects = dynamic(
+  () =>
+    import("@/components/Projects/Projects").then((mod) => ({
+      default: mod.Projects,
+    })),
+  {
+    loading: () => <ProjectsSkeleton />,
+  }
+);
 
-// Simple skeleton loader for the entire card
-function StatusCardSkeleton() {
-  return (
-    <div className="w-full max-w-md bg-slate-900/80 border border-slate-700/50 rounded-3xl shadow-xl overflow-hidden animate-pulse">
-      <div className="h-2 w-full bg-slate-700"></div>
-      <div className="p-8">
-        <div className="flex justify-between items-center mb-8">
-          <div className="h-8 w-36 bg-slate-700 rounded"></div>
-          <div className="h-6 w-20 bg-slate-700 rounded-full"></div>
-        </div>
+const Team = dynamic(
+  () => import("@/components/Team/Team").then((mod) => ({ default: mod.Team })),
+  {
+    loading: () => <TeamSkeleton />,
+  }
+);
 
-        <div className="flex flex-col items-center py-16">
-          <div className="h-36 w-36 rounded-full bg-slate-800 mb-8"></div>
-          <div className="h-10 w-64 bg-slate-800 rounded mb-3"></div>
-          <div className="h-4 w-full max-w-xs bg-slate-800 rounded mb-2"></div>
-          <div className="h-4 w-full max-w-xs bg-slate-800 rounded mb-8"></div>
-          <div className="h-8 w-32 bg-slate-800 rounded-full"></div>
-        </div>
-      </div>
+const WorkProcess = dynamic(
+  () =>
+    import("@/components/WorkProcess/WorkProcess").then((mod) => ({
+      default: mod.WorkProcess,
+    })),
+  {
+    loading: () => <WorkProcessSkeleton />,
+  }
+);
 
-      <div className="bg-slate-800 px-8 py-4 border-t border-slate-700">
-        <div className="flex justify-between">
-          <div className="h-4 w-32 bg-slate-700 rounded"></div>
-          <div className="h-4 w-32 bg-slate-700 rounded"></div>
-        </div>
-      </div>
-    </div>
-  );
-}
+const Contact = dynamic(
+  () =>
+    import("@/components/Contact/Contact").then((mod) => ({
+      default: mod.Contact,
+    })),
+  {
+    loading: () => <ContactSkeleton />,
+  }
+);
+
+const Footer = dynamic(
+  () =>
+    import("@/components/Footer/Footer").then((mod) => ({
+      default: mod.Footer,
+    })),
+  {
+    loading: () => <FooterSkeleton />,
+  }
+);
 
 export default function Home() {
   return (
-    <div className="h-screen w-full flex items-center justify-center bg-slate-800 p-6 text-slate-100">
-      <Suspense fallback={<StatusCardSkeleton />}>
-        <StatusCard />
-      </Suspense>
+    <div className="min-h-screen bg-white dark:bg-zinc-900">
+      <Navbar />
+      <main>
+        <Hero />
+        <Projects />
+        <Team />
+        <WorkProcess />
+        <Contact />
+      </main>
+      <Footer />
     </div>
   );
 }

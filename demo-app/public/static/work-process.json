@@ -1,0 +1,32 @@
+{
+  "header": {
+    "title": "How We Work",
+    "subtitle": "Our proven process ensures successful project delivery"
+  },
+  "steps": [
+    {
+      "id": 1,
+      "icon": "Lightbulb",
+      "title": "Idea",
+      "description": "We start by understanding your vision and requirements through detailed discussions."
+    },
+    {
+      "id": 2,
+      "icon": "Layout",
+      "title": "Planning",
+      "description": "Our team creates a comprehensive plan with wireframes and technical specifications."
+    },
+    {
+      "id": 3,
+      "icon": "Code",
+      "title": "Execution",
+      "description": "We develop your solution using modern technologies and best practices."
+    },
+    {
+      "id": 4,
+      "icon": "Rocket",
+      "title": "Delivery",
+      "description": "We ensure smooth deployment and provide ongoing support for your project."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "header": "Let's Connect",
+  "subheader": "Have a question or want to work together? We'd love to hear from you.",
+  "info": [
+    {
+      "icon": "MessageSquare",
+      "title": "Chat with us",
+      "description": "Our team is here to help you with any questions."
+    },
+    {
+      "icon": "Phone",
+      "title": "Call us",
+      "description": "+1 (555) 123-4567"
+    },
+    {
+      "icon": "MapPin",
+      "title": "Visit us",
+      "description": "123 Business Street, City"
+    },
+    {
+      "icon": "Mail",
+      "title": "Email us",
+      "description": "contact@taskster.com"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "tagline": "Welcome to Taskster Solutions",
+  "headline": "Transforming Ideas into",
+  "highlight": "Digital Reality",
+  "subheadline": "We craft innovative digital solutions that drive business growth and create exceptional user experiences.",
+  "actions": [
+    { "label": "Explore Projects", "href": "#projects" },
+    { "label": "Get in Touch", "href": "#contact" }
+  ]
+}

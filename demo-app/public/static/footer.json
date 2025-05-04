@@ -1,0 +1,52 @@
+{
+  "brand": {
+    "name": "Taskster Solutions",
+    "description": "Empowering businesses with innovative solutions and exceptional service.",
+    "socials": [
+      {
+        "type": "twitter",
+        "href": "#"
+      },
+      {
+        "type": "linkedin",
+        "href": "#"
+      },
+      {
+        "type": "github",
+        "href": "#"
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "Home",
+      "href": "#"
+    },
+    {
+      "title": "Projects",
+      "href": "#projects"
+    },
+    {
+      "title": "Team",
+      "href": "#team"
+    },
+    {
+      "title": "Contact",
+      "href": "#contact"
+    }
+  ],
+  "contact": [
+    {
+      "icon": "MapPin",
+      "text": "123 Business Street, City"
+    },
+    {
+      "icon": "Mail",
+      "text": "contact@taskster.com"
+    },
+    {
+      "icon": "Phone",
+      "text": "+1 (555) 123-4567"
+    }
+  ]
+}

@@ -1,11 +1,17 @@
-import { NextConfig } from "next";
+import type { NextConfig } from "next";
 
-const config: NextConfig = {
-  output: "export",
-  images: {
-    unoptimized: true,
+const nextConfig: NextConfig = {
+  /* config options here */
+  images:{
+    remotePatterns:[
+      {
+        hostname: "images.unsplash.com",
+        protocol: "https",
+        port: "",
+        pathname: "/**",
+      },
+    ],
   },
-  basePath: process.env.NODE_ENV === "production" ? "/taskster" : "",
 };
 
-export default config;
+export default nextConfig;

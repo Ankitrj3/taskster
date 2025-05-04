@@ -1,0 +1,14 @@
+{
+  "logo": {
+    "src": "/logo.svg",
+    "alt": "Logo",
+    "brand": ["TASKSTER", "SOLUTIONS"]
+  },
+  "navItems": [
+    { "name": "Home", "href": "#hero" },
+    { "name": "Projects", "href": "#projects" },
+    { "name": "Our Team", "href": "#team" },
+    { "name": "How We Work", "href": "#work" },
+    { "name": "Contact", "href": "#contact" }
+  ]
+}
