@@ -37,7 +37,7 @@ const WorkProcess = dynamic(
 );
 
 const Contact = dynamic(
-  () => import("@/components/Contact/Contact"),
+  () => import("../components/Contact/Contact"),
   {
     loading: () => <ContactSkeleton />,
   }
