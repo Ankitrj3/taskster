@@ -4,14 +4,12 @@ import { NavItem } from "@/types/navbar";
 
 interface NavbarMobileMenuProps {
   readonly navItems: ReadonlyArray<NavItem>;
-  readonly isScrolled: boolean;
   readonly isOpen: boolean;
   readonly onClose: () => void;
 }
 
 export default function NavbarMobileMenu({
   navItems,
-  isScrolled,
   isOpen,
   onClose,
 }: NavbarMobileMenuProps) {

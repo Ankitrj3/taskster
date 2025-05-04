@@ -69,7 +69,7 @@ function NavbarComponent() {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-4">
-              <NavbarLinks navItems={navItems} isScrolled={isScrolled} />
+              <NavbarLinks navItems={navItems} />
               <NavbarThemeToggle
                 theme={theme}
                 toggleTheme={toggleTheme}
@@ -101,7 +101,6 @@ function NavbarComponent() {
       {/* Mobile Navigation */}
       <NavbarMobileMenu
         navItems={navItems}
-        isScrolled={isScrolled}
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
       />

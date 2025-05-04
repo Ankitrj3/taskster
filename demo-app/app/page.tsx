@@ -37,10 +37,7 @@ const WorkProcess = dynamic(
 );
 
 const Contact = dynamic(
-  () =>
-    import("@/components/Contact/Contact").then((mod) => ({
-      default: mod.Contact,
-    })),
+  () => import("@/components/Contact/Contact"),
   {
     loading: () => <ContactSkeleton />,
   }
