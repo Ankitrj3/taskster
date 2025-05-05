@@ -5,11 +5,11 @@ import dynamic from "next/dynamic";
 import { useTheme } from "next-themes";
 import { Menu, X } from "lucide-react";
 import { NavItem } from "@/types/navbar";
-import NavbarSkeleton from "../skeletons/NavbarSkeleton";
-import NavbarLogo from "./NavbarLogo";
-import NavbarLinks from "./NavbarLinks";
-import NavbarThemeToggle from "./NavbarThemeToggle";
-import NavbarMobileMenu from "./NavbarMobileMenu";
+import NavbarSkeleton from "@/components/skeletons/NavbarSkeleton";
+import NavbarLogo from "@/components/Navbar/NavbarLogo";
+import NavbarLinks from "@/components/Navbar/NavbarLinks";
+import NavbarThemeToggle from "@/components/Navbar/NavbarThemeToggle";
+import NavbarMobileMenu from "@/components/Navbar/NavbarMobileMenu";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navItems: NavItem[] = [
