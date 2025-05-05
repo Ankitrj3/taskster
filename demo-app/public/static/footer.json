@@ -19,18 +19,22 @@
   },
   "links": [
     {
+      "id": "home-link",
       "title": "Home",
       "href": "#"
     },
     {
+      "id": "projects-link",
       "title": "Projects",
       "href": "#projects"
     },
     {
+      "id": "team-link",
       "title": "Team",
       "href": "#team"
     },
     {
+      "id": "contact-link",
       "title": "Contact",
       "href": "#contact"
     }
