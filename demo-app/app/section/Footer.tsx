@@ -4,31 +4,43 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { FooterData } from "@/types/footer";
-import FooterSkeleton from "../skeletons/FooterSkeleton";
-import FooterBrandSkeleton from "../skeletons/FooterBrandSkeleton";
-import FooterLinksSkeleton from "../skeletons/FooterLinksSkeleton";
-import FooterContactInfoSkeleton from "../skeletons/FooterContactInfoSkeleton";
+import FooterSkeleton from "@/components/skeletons/FooterSkeleton";
+import FooterBrandSkeleton from "@/components/skeletons/FooterBrandSkeleton";
+import FooterLinksSkeleton from "@/components/skeletons/FooterLinksSkeleton";
+import FooterContactInfoSkeleton from "@/components/skeletons/FooterContactInfoSkeleton";
 
-const FooterBrand = dynamic(() => import("./FooterBrand"), {
-  loading: () => <FooterBrandSkeleton />,
-});
+const FooterBrand = dynamic(
+  () => import("@/components/Footer/FooterBrand"),
+  {
+    loading: () => <FooterBrandSkeleton />,
+  }
+);
 
-const FooterLinks = dynamic(() => import("./FooterLinks"), {
-  loading: () => <FooterLinksSkeleton />,
-});
+const FooterLinks = dynamic(
+  () => import("@/components/Footer/FooterLinks"),
+  {
+    loading: () => <FooterLinksSkeleton />,
+  }
+);
 
-const FooterContactInfo = dynamic(() => import("./FooterContactInfo"), {
-  loading: () => <FooterContactInfoSkeleton />,
-});
+const FooterContactInfo = dynamic(
+  () => import("@/components/Footer/FooterContactInfo"),
+  {
+    loading: () => <FooterContactInfoSkeleton />,
+  }
+);
 
-const FooterBottom = dynamic(() => import("./FooterBottom"), {
-  loading: () => (
-    <div className="border-t border-zinc-200/50 dark:border-zinc-800/50 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-      <div className="h-4 w-48 bg-zinc-200 dark:bg-zinc-800 rounded animate-pulse mb-4 md:mb-0" />
-      <div className="w-5 h-5 bg-zinc-200 dark:bg-zinc-800 rounded-full animate-pulse" />
-    </div>
-  ),
-});
+const FooterBottom = dynamic(
+  () => import("@/components/Footer/FooterBottom"),
+  {
+    loading: () => (
+      <div className="border-t border-zinc-200/50 dark:border-zinc-800/50 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="h-4 w-48 bg-zinc-200 dark:bg-zinc-800 rounded animate-pulse mb-4 md:mb-0" />
+        <div className="w-5 h-5 bg-zinc-200 dark:bg-zinc-800 rounded-full animate-pulse" />
+      </div>
+    ),
+  }
+);
 
 export function Footer() {
   const { theme, setTheme } = useTheme();

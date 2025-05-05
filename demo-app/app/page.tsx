@@ -1,7 +1,7 @@
 "use client";
 
-import { Navbar } from "@/components/Navbar/Navbar";
-import { Hero } from "@/components/Hero/Hero";
+import { Navbar } from "@/app/section/Navbar";
+import { Hero } from "@/app/section/Hero";
 import dynamic from "next/dynamic";
 import ProjectsSkeleton from "@/components/skeletons/ProjectsSkeleton";
 import TeamSkeleton from "@/components/skeletons/TeamSkeleton";
@@ -11,7 +11,7 @@ import FooterSkeleton from "@/components/skeletons/FooterSkeleton";
 
 const Projects = dynamic(
   () =>
-    import("@/components/Projects/Projects").then((mod) => ({
+    import("@/app/section/Projects").then((mod) => ({
       default: mod.Projects,
     })),
   {
@@ -36,16 +36,13 @@ const WorkProcess = dynamic(
   }
 );
 
-const Contact = dynamic(
-  () => import("../components/Contact/Contact"),
-  {
-    loading: () => <ContactSkeleton />,
-  }
-);
+const Contact = dynamic(() => import("./section/Contact"), {
+  loading: () => <ContactSkeleton />,
+});
 
 const Footer = dynamic(
   () =>
-    import("@/components/Footer/Footer").then((mod) => ({
+    import("@/app/section/Footer").then((mod) => ({
       default: mod.Footer,
     })),
   {

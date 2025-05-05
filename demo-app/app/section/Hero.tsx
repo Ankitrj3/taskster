@@ -3,26 +3,32 @@
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { HeroData } from "@/types/hero";
-import HeroSkeleton from "../skeletons/HeroSkeleton";
-import HeroTaglineSkeleton from "../skeletons/HeroTaglineSkeleton";
-import HeroHeadlineSkeleton from "../skeletons/HeroHeadlineSkeleton";
-import HeroActionsSkeleton from "../skeletons/HeroActionsSkeleton";
+import HeroSkeleton from "@/components/skeletons/HeroSkeleton";
+import HeroTaglineSkeleton from "@/components/skeletons/HeroTaglineSkeleton";
+import HeroHeadlineSkeleton from "@/components/skeletons/HeroHeadlineSkeleton";
+import HeroActionsSkeleton from "@/components/skeletons/HeroActionsSkeleton";
 
-const HeroTagline = dynamic(() => import("./HeroTagline"), {
+const HeroTagline = dynamic(() => import("@/components/Hero/HeroTagline"), {
   loading: () => <HeroTaglineSkeleton />,
 });
 
-const HeroHeadline = dynamic(() => import("./HeroHeadline"), {
-  loading: () => <HeroHeadlineSkeleton />,
-});
+const HeroHeadline = dynamic(
+  () => import("@/components/Hero/HeroHeadline"),
+  {
+    loading: () => <HeroHeadlineSkeleton />,
+  }
+);
 
-const HeroActions = dynamic(() => import("./HeroActions"), {
+const HeroActions = dynamic(() => import("@/components/Hero/HeroActions"), {
   loading: () => <HeroActionsSkeleton />,
 });
 
-const HeroBackground = dynamic(() => import("./HeroBackground"), {
-  loading: () => null,
-});
+const HeroBackground = dynamic(
+  () => import("@/components/Hero/HeroBackground"),
+  {
+    loading: () => null,
+  }
+);
 
 export function Hero() {
   const [data, setData] = useState<HeroData | null>(null);

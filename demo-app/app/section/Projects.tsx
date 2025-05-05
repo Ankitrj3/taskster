@@ -4,22 +4,31 @@ import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { Project } from "@/types/projects";
-import ProjectsSkeleton from "../skeletons/ProjectsSkeleton";
-import ProjectsHeaderSkeleton from "../skeletons/ProjectsHeaderSkeleton";
-import ProjectsGridSkeleton from "../skeletons/ProjectsGridSkeleton";
-import ProjectsViewAllButtonSkeleton from "../skeletons/ProjectsViewAllButtonSkeleton";
+import ProjectsSkeleton from "@/components/skeletons/ProjectsSkeleton";
+import ProjectsHeaderSkeleton from "@/components/skeletons/ProjectsHeaderSkeleton";
+import ProjectsGridSkeleton from "@/components/skeletons/ProjectsGridSkeleton";
+import ProjectsViewAllButtonSkeleton from "@/components/skeletons/ProjectsViewAllButtonSkeleton";
 
-const ProjectsHeader = dynamic(() => import("./ProjectsHeader"), {
-  loading: () => <ProjectsHeaderSkeleton />,
-});
+const ProjectsHeader = dynamic(
+  () => import("@/components/Projects/ProjectsHeader"),
+  {
+    loading: () => <ProjectsHeaderSkeleton />,
+  }
+);
 
-const ProjectsGrid = dynamic(() => import("./ProjectsGrid"), {
-  loading: () => <ProjectsGridSkeleton />,
-});
+const ProjectsGrid = dynamic(
+  () => import("@/components/Projects/ProjectsGrid"),
+  {
+    loading: () => <ProjectsGridSkeleton />,
+  }
+);
 
-const ProjectsViewAllButton = dynamic(() => import("./ProjectsViewAllButton"), {
-  loading: () => <ProjectsViewAllButtonSkeleton />,
-});
+const ProjectsViewAllButton = dynamic(
+  () => import("@/components/Projects/ProjectsViewAllButton"),
+  {
+    loading: () => <ProjectsViewAllButtonSkeleton />,
+  }
+);
 
 export function Projects() {
   const [projects, setProjects] = useState<Project[]>([]);

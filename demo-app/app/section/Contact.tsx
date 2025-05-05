@@ -4,22 +4,31 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import { ContactData } from "@/types/contact";
-import ContactSkeleton from "../skeletons/ContactSkeleton";
-import ContactHeaderSkeleton from "../skeletons/ContactHeaderSkeleton";
-import ContactInfoSkeleton from "../skeletons/ContactInfoSkeleton";
-import ContactFormSkeleton from "../skeletons/ContactFormSkeleton";
+import ContactSkeleton from "@/components/skeletons/ContactSkeleton";
+import ContactHeaderSkeleton from "@/components/skeletons/ContactHeaderSkeleton";
+import ContactInfoSkeleton from "@/components/skeletons/ContactInfoSkeleton";
+import ContactFormSkeleton from "@/components/skeletons/ContactFormSkeleton";
 
-const ContactHeader = dynamic(() => import("./ContactHeader"), {
-  loading: () => <ContactHeaderSkeleton />,
-});
+const ContactHeader = dynamic(
+  () => import("@/components/Contact/ContactHeader"),
+  {
+    loading: () => <ContactHeaderSkeleton />,
+  }
+);
 
-const ContactInfo = dynamic(() => import("./ContactInfo"), {
-  loading: () => <ContactInfoSkeleton />,
-});
+const ContactInfo = dynamic(
+  () => import("@/components/Contact/ContactInfo"),
+  {
+    loading: () => <ContactInfoSkeleton />,
+  }
+);
 
-const ContactForm = dynamic(() => import("./ContactForm"), {
-  loading: () => <ContactFormSkeleton />,
-});
+const ContactForm = dynamic(
+  () => import("@/components/Contact/ContactForm"),
+  {
+    loading: () => <ContactFormSkeleton />,
+  }
+);
 
 export default function Contact() {
   const [data, setData] = useState<ContactData | null>(null);
