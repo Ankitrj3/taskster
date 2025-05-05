@@ -1,8 +1,9 @@
 import React from "react";
 
 interface Link {
-  title: string;
-  href: string;
+  readonly id: string;
+  readonly title: string;
+  readonly href: string;
 }
 
 export default function FooterLinks({ links }: { links: Link[] }) {
@@ -12,8 +13,8 @@ export default function FooterLinks({ links }: { links: Link[] }) {
         Quick Links
       </h4>
       <ul className="space-y-2">
-        {links.map((link) => (
-          <li key={link.title}>
+        {links.map((link, index) => (
+          <li key={index}>
             <a
               href={link.href}
               className="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-all duration-200 hover:translate-x-1"
