@@ -1,0 +1,53 @@
+{
+  "header": {
+    "title": "Our Team",
+    "subtitle": "Meet the talented individuals from Lovely Professional University behind our success"
+  },
+  "members": [
+    {
+      "id": 1,
+      "name": "Pushkar Varshney",
+      "role": "Team Lead",
+      "image": "/team/pushkar.jpg",
+      "bio": "A dynamic Computer Science graduate from LPU, Pushkar combines technical expertise with leadership skills. With a passion for emerging technologies and innovation, he drives our team's vision and ensures project excellence.",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/pushkar-varshney-32714b2b1/",
+        "github": "https://github.com/M-Pushkar-Varshney-K"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Rajvardhan Singh",
+      "role": "Backend Developer",
+      "image": "/team/rajvardhan.jpg",
+      "bio": "A skilled Backend Developer and LPU alumnus, Rajvardhan specializes in building robust server-side applications. His expertise in system architecture and database optimization helps us deliver scalable and efficient solutions.",
+      "social": {
+        "github": "https://github.com/rajv4rdhan",
+        "linkedin": "https://linkedin.com/in/rajv4rdhan"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Ankit Ranjan",
+      "role": "Frontend Developer",
+      "image": "/team/ankit.jpg",
+      "bio": "An LPU graduate with a keen eye for design, Ankit excels in creating intuitive and responsive user interfaces. His expertise in modern frontend technologies and user experience design helps us build engaging digital products.",
+      "social": {
+        "linkedin": "https://linkedin.com/in/ankitrj3",
+        "github": "https://github.com/ankitrj3"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Vikas Singh",
+      "role": "Devops Engineer",
+      "image": "/team/vikas.jpg",
+      "bio": "A DevOps expert and LPU graduate, Vikas specializes in cloud infrastructure and automation. His expertise in CI/CD pipelines and cloud technologies ensures our applications are deployed efficiently and securely.",
+      "social": {
+        "github": "https://github.com/xanderbilla",
+        "linkedin": "https://linkedin.com/in/xanderbilla",
+        "website": "https://xanderbilla.com/"
+      }
+    }
+  ]
+}

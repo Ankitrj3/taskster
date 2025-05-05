@@ -5,20 +5,19 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { Mail, Send } from "lucide-react";
+import { toast } from "sonner";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
   message: z.string().min(10, "Message must be at least 10 characters"),
+  subscribe: z.boolean(),
 });
 
 type FormData = z.infer<typeof formSchema>;
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<
-    "idle" | "success" | "error"
-  >("idle");
 
   const {
     register,
@@ -27,19 +26,31 @@ export default function ContactForm() {
     formState: { errors },
   } = useForm<FormData>({
     resolver: zodResolver(formSchema),
+    defaultValues: {
+      subscribe: true,
+    },
   });
 
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
-    setSubmitStatus("idle");
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      const mailtoLink = `mailto:support@taskstersolutions.com?subject=Contact Form Submission&body=Name: ${data.name}%0D%0AEmail: ${data.email}%0D%0AMessage: ${data.message}`;
-      window.location.href = mailtoLink;
-      setSubmitStatus("success");
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit form");
+      }
+
+      toast.success("Message sent successfully!");
       reset();
-    } catch {
-      setSubmitStatus("error");
+    } catch (error) {
+      console.error("Form submission error:", error);
+      toast.error("Failed to send message. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -90,6 +101,22 @@ export default function ContactForm() {
             </p>
           )}
         </div>
+
+        {/* Subscribe Checkbox */}
+        <div className="flex items-center">
+          <input
+            type="checkbox"
+            {...register("subscribe")}
+            className="form-checkbox"
+          />
+          <label className="ml-2 text-sm text-zinc-900 dark:text-zinc-50">
+            Subscribe to newsletter
+          </label>
+        </div>
+
+        {/* Honeypot field */}
+        <input type="hidden" name="_gotcha" style={{ display: "none" }} />
+
         <div className="flex items-center justify-start">
           <button
             type="submit"
@@ -108,16 +135,6 @@ export default function ContactForm() {
               </>
             )}
           </button>
-          {submitStatus === "success" && (
-            <p className="ml-4 text-sm text-green-600 dark:text-green-400">
-              Message sent successfully!
-            </p>
-          )}
-          {submitStatus === "error" && (
-            <p className="ml-4 text-sm text-red-500 dark:text-red-400">
-              An error occurred. Please try again.
-            </p>
-          )}
         </div>
       </form>
     </div>
