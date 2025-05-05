@@ -8,19 +8,14 @@
       "description": "Our team is here to help you with any questions."
     },
     {
-      "icon": "Phone",
-      "title": "Call us",
-      "description": "+1 (555) 123-4567"
-    },
-    {
       "icon": "MapPin",
       "title": "Visit us",
-      "description": "123 Business Street, City"
+      "description": "Jalandhar, Punjab, India"
     },
     {
       "icon": "Mail",
       "title": "Email us",
-      "description": "contact@taskster.com"
+      "description": "contact@taskstersolutions.com"
     }
   ]
 }
