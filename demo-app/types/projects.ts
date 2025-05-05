@@ -5,5 +5,7 @@ export interface Project {
   image: string;
   tags: string[];
   category: string;
-  website?: string;
+  company: string;
+  website: string;
+  linkedin?: string;
 }

@@ -4,30 +4,7 @@ import { useEffect, useState } from "react";
 import TeamHeader from "./TeamHeader";
 import TeamMember from "./TeamMember";
 import TeamSkeleton from "../skeletons/TeamSkeleton";
-
-interface Social {
-  github?: string;
-  linkedin?: string;
-  twitter?: string;
-  website?: string;
-}
-
-interface TeamMember {
-  id: number;
-  name: string;
-  role: string;
-  image: string;
-  bio: string;
-  social: Social;
-}
-
-interface TeamData {
-  header: {
-    title: string;
-    subtitle: string;
-  };
-  members: TeamMember[];
-}
+import { TeamData } from "@/types/team";
 
 export function Team() {
   const [data, setData] = useState<TeamData | null>(null);

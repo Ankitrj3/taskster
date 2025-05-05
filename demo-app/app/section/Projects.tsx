@@ -117,7 +117,11 @@ export function Projects() {
           />
         </motion.div>
         <ProjectsGrid projects={projects} />
-        <ProjectsViewAllButton />
+        {
+          projects.length > 3 && (
+            <ProjectsViewAllButton />
+          )
+        }
       </div>
     </section>
   );

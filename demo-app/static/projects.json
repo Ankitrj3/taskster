@@ -2,25 +2,12 @@
   {
     "id": 1,
     "title": "E-commerce Platform",
-    "description": "A modern e-commerce platform with advanced search, filtering, and payment integration.",
+    "description": "Deployment of Colour Nepal, a Nepal-based e-commerce startup company. The platform includes advanced search, filtering, user authentication, and secure payment integration.",
     "image": "https://images.unsplash.com/photo-1556741533-6e6a62bd8b49?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    "tags": ["React", "Node.js", "MongoDB"],
-    "category": "Web Development"
-  },
-  {
-    "id": 2,
-    "title": "Task Management App",
-    "description": "A collaborative task management application with real-time updates and team features.",
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    "tags": ["Next.js", "Firebase", "Tailwind CSS"],
-    "category": "Productivity"
-  },
-  {
-    "id": 3,
-    "title": "Health & Fitness Tracker",
-    "description": "A comprehensive health tracking application with workout planning and nutrition logging.",
-    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    "tags": ["React Native", "GraphQL", "PostgreSQL"],
-    "category": "Health & Wellness"
+    "tags": ["NextJs", "Node.js"],
+    "category": "Web Development",
+    "company": "Colour Nepal",
+    "website": "https://www.colournepal.com",
+    "linkedin": "https://www.linkedin.com/company/colour-nepal"
   }
 ]
